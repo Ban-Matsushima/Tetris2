@@ -1,0 +1,17 @@
+{
+    "name": "PWA テトリス",
+    "short_name": "テトリス",
+    "description": "オフラインで遊べるシンプルなPWAテトリスゲーム",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#4A5568",
+    "theme_color": "#4A5568",
+    "icons": [
+        {
+            "src": "icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}
