@@ -1,0 +1,58 @@
+/* style.css */
+
+/* Inter font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Tailwind classes handle most of the body styling in index.html */
+}
+
+/* Custom styles for the game container if needed, though Tailwind handles most */
+.game-container {
+    max-width: 600px; /* Limit max width for larger screens */
+    width: 100%; /* Full width on smaller screens */
+}
+
+/* Ensure canvas scales correctly */
+canvas {
+    display: block; /* Remove extra space below canvas */
+    /* Width and height are set directly on the canvas element in HTML */
+    /* For responsiveness, consider setting max-width and height auto if not fixed */
+}
+
+/* Button hover/active effects are handled by Tailwind classes */
+.control-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px; /* Ensure buttons are large enough for touch */
+    min-height: 50px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+    .game-container {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .game-info {
+        flex-direction: column; /* Stack info boxes vertically on small screens */
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .game-info > div {
+        width: 100%; /* Full width for info boxes */
+    }
+
+    .controls {
+        flex-wrap: wrap; /* Allow control buttons to wrap */
+        justify-center: center;
+        margin-top: 1rem;
+    }
+
+    .control-button {
+        margin: 0.5rem; /* Add some margin between buttons when wrapped */
+    }
+}
